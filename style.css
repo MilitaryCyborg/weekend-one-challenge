@@ -25,14 +25,19 @@ body {
     max-width: 80%;
     margin: auto;
   }
-  footer {
-    height: 8em;
-    background-color: #7a7a7a;
-    text-align: center;
+
+  
+  header {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  h1 {
+    font-size: 2.5em;
   }
   
-  
-  header, footer {
+  footer {
     height: 100%;
     display: flex;
     justify-content: center;

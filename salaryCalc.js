@@ -12,14 +12,14 @@ function submitInfo(event) {
     let lastNameInput = document.getElementById('lastNameInput').value;
     console.log("Last Name Input: ", lastNameInput);
     let idInput = document.getElementById('idInput').value;
-    console.log("Last Name Input: ", idInput);
+    console.log("ID Input: ", idInput);
     let titleInput = document.getElementById('titleInput').value;
-    console.log("Last Name Input: ", titleInput);
+    console.log("Title Input: ", titleInput);
     let annualSalaryInput = document.getElementById('annualSalaryInput').value;
-    console.log("Last Name Input: ", annualSalaryInput);
+    console.log("Annual Salary Input: ", annualSalaryInput);
 
     tablePath = document.getElementById('tableBody')
-    tablePath.innerHTML += `<tr><td>${firstNameInput}</td><td>${lastNameInput}</td><td>${idInput}</td><td>${titleInput}</td><td>${annualSalaryInput}</td><td><button onclick="deleteInfo(event)">❌</button></td></tr>`;
+    tablePath.innerHTML += `<tr><td>${firstNameInput}</td><td>${lastNameInput}</td><td>${idInput}</td><td>${titleInput}</td><td>${annualSalaryInput}</td><td><button onclick="deleteInfo(event)">Delete</button></td></tr>`;
     event.preventDefault()
   }
   
@@ -32,3 +32,4 @@ function submitInfo(event) {
   
     event.preventDefault()
   }
+
