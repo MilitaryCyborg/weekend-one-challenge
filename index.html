@@ -1,47 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <link rel="stylesheet" href="style.css">
-  <script defer src="salaryCalc.js"></script>
-  <title>Salary Calculator</title>
-</head>
-<body>
-  <header>
-    <h1>Salary Calculator</h1>
-  </header>
-  <main>
-    <section>
-      <h2>Add Employee Info:</h2>
-      <form id="formInputs">
-        <input id="firstNameInput" data-testid="firstNameInput" placeholder="First Name" type="text" />
-        <input id="lastNameInput" data-testid="lastNameInput" placeholder="Last Name" type="text" />
-        <input id="idInput" data-testid="idInput" placeholder="Employee ID #" type="text" />
-        <input id="titleInput" data-testid="titleInput" placeholder="Title/ Position" type="text" />
-        <input id="annualSalaryInput" data-testid="annualSalaryInput" placeholder="Annual Salary" type="number" />
-        <button onclick="submitInfo(event)">Submit</button>
-      </form>
-    </section>
-    <h2>Employees:</h2>
-    <section>
-      <table>
-        <thead>
-          <tr>
-            <th>First Name:</th>
-            <th>Last Name:</th>
-            <th>Id#:</th>
-            <th>Title:</th>
-            <th>Annual Salary:</th>
-            <th></th>
-          </tr>
-        </thead>
-        <tbody id='tableBody'>
-        </tbody>
-      </table>
-    </section>
-  </main>
-  <footer>
-    <p>Total Monthly: </p>
-  </footer>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="salaryCalc.js"></script>
+    <title>Salary Calculator</title>
+  </head>
+  <body>
+    <header>
+      <h1>Salary Calculator</h1>
+    </header>
+    <main>
+      <section>
+        <h2>Add Employee Info:</h2>
+        <form id="formInputs">
+          <input
+            id="firstNameInput"
+            data-testid="firstNameInput"
+            placeholder="First Name"
+            type="text"
+          />
+          <input
+            id="lastNameInput"
+            data-testid="lastNameInput"
+            placeholder="Last Name"
+            type="text"
+          />
+          <input
+            id="idInput"
+            data-testid="idInput"
+            placeholder="Employee ID #"
+            type="text"
+          />
+          <input
+            id="titleInput"
+            data-testid="titleInput"
+            placeholder="Title/ Position"
+            type="text"
+          />
+          <input
+            id="annualSalaryInput"
+            data-testid="annualSalaryInput"
+            placeholder="Annual Salary"
+            type="number"
+          />
+          <button onclick="submitInfo(event)">Submit</button>
+        </form>
+      </section>
+      <h2>Employees:</h2>
+      <section>
+        <table>
+          <thead>
+            <tr>
+              <th>First Name:</th>
+              <th>Last Name:</th>
+              <th>Id#:</th>
+              <th>Title:</th>
+              <th>Annual Salary:</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody id="tableBody"></tbody>
+        </table>
+      </section>
+    </main>
+    <footer>
+      <p>Total Monthly:</p>
+    </footer>
+  </body>
 </html>
