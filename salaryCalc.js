@@ -6,16 +6,12 @@ function onReady() {
 }
 
 //Submit Employee Data To Form
-function submitInfo(event) {
-    // check info in event
-    // console.log('submit clicked', event);
-    // console.log('affirmation text', affirmation.value)
-  
+function submitInfo(event) {  
     let firstNameInput = document.getElementById('firstNameInput').value;
     console.log("First Name Input: ", firstNameInput);
     let lastNameInput = document.getElementById('lastNameInput').value;
     console.log("Last Name Input: ", lastNameInput);
-    let idInput = document.getElementById('idInpit').value;
+    let idInput = document.getElementById('idInput').value;
     console.log("Last Name Input: ", idInput);
     let titleInput = document.getElementById('titleInput').value;
     console.log("Last Name Input: ", titleInput);
@@ -23,14 +19,14 @@ function submitInfo(event) {
     console.log("Last Name Input: ", annualSalaryInput);
 
     tablePath = document.getElementById('tableBody')
-    tablePath.innerHTML += `<tr><td>${firstNameInput}</td><td>${lastNameInput}</td><td><button onclick="deleteInfo(event)">❌</button></td></tr>`;
+    tablePath.innerHTML += `<tr><td>${firstNameInput}</td><td>${lastNameInput}</td><td>${idInput}</td><td>${titleInput}</td><td>${annualSalaryInput}</td><td><button onclick="deleteInfo(event)">❌</button></td></tr>`;
     event.preventDefault()
   }
   
   //Delete Row Of Employee Data
   function deleteInfo(event) {
     // Console log to find path to correct node of entire row data
-    // console.log('test', event.target.parentNode.parentNode)
+    console.log('test', event.target.parentNode.parentNode)
     
     event.target.parentNode.parentNode.remove();
   
