@@ -5,7 +5,9 @@ function onReady() {
   console.log("Javascript is working!");
 }
 
-//Submit Employee Data To Form
+let totalSalaryExpense = 0;
+
+//Submit Employee Data To Form & Delete Button & Monthly Total
 function submitInfo(event) {
   let firstNameInput = document.getElementById("firstNameInput").value;
   console.log("First Name Input: ", firstNameInput);
@@ -23,7 +25,15 @@ function submitInfo(event) {
   <td>${lastNameInput}</td>
   <td>${idInput}</td><td>${titleInput}</td>
   <td>${annualSalaryInput}</td>
-  <td><button onclick="deleteInfo(event)">Delete</button></td></tr>`
+  <td><button onclick="deleteInfo(event)">Delete</button></td></tr>`;
+
+  totalSalaryExpense += Number(annualSalaryInput);
+  
+  const divisor = 12;
+  let monthlySalaryExpense = totalSalaryExpense / divisor;
+  
+  let assignTotal = document.getElementById("totalMonthly");
+  assignTotal.innerText = monthlySalaryExpense;
 
   event.preventDefault();
 }
